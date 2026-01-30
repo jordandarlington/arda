@@ -1,4 +1,4 @@
-# A.R.D.A.
+# Automated Repository DevOps Assistant (ARDA)
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -6,8 +6,22 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-## Setup
+## Overview
+ARDA is a GitHub App built with [Probot](https://probot.github.io/) that automates various DevOps tasks within your GitHub repositories. It helps streamline workflows, enforce best practices, and improve collaboration among team members.
 
+## Features
+
+### Issues
+- [ ] **Issue Assignment**: Automatically assigns new issues to a default assignee or based on specific criteria.
+
+### Pull Requests
+- [ ] **Pull Request Target Branch Check**: Ensures that pull requests are always targeted at the correct branch (e.g., `main/master` or `develop`), preventing accidental merges into unintended branches.
+- [ ] **Pull Request Labelling**: Automatically adds relevant destination labels to pull requests based on their branch.
+
+### Check Runs
+- [ ] **Failure Commenting**: Posts comments on pull requests when specific check runs fail, providing immediate feedback to developers.
+
+## Setup
 ```sh
 # Install dependencies
 npm install
@@ -17,7 +31,6 @@ npm start
 ```
 
 ## Docker
-
 ```sh
 # 1. Build container
 docker build -t arda .
@@ -27,13 +40,11 @@ docker run -e APP_ID=<app-id> -e PRIVATE_KEY=<pem-value> arda
 ```
 
 <!-- ## Contributing
-
 If you have suggestions for how arda could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
 
 For more, check out the [Contributing Guide](CONTRIBUTING.md). -->
 
 ## License
-
 This repo is licensed under an MIT license. A copy of the license is also provided.
 
 ---
